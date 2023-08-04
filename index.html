@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>志賀高原スキーエリア3Dマップ</title>
+<meta name="keywords" content="ページのキーワードA,B,C">
+<meta name="description" content="ページの説明">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="sample_index.css">
+</head>
+<body>
+<div id="outer">
+<header>
+<h1>志賀高原スキーエリア3Dマップ試作</h1>
+</header>
+<CENTER><IMG SRC="Shiga_areal_3D.jpg" border="2" ALIGN="BOTTOM"> </CENTER>
+<main>
+<div id="text">
+<h2>空中写真データ・レンダリング処理結果</h2>
+<p>基盤地図情報ダウンロードサービスの「地図・空中写真閲覧サービス」で志賀高原エリアを検索すると、2013年のデータが公開されている。（整理番号：CCB20137）東西方向の撮影コース番号は、北から奥志賀（C6）、焼額山（C7～C9）、一ノ瀬（C9）、高天が原（C10、C11）、丸池（C12）、熊の湯・横手山・渋峠（C15～C17）である。</p>
+<p>空中写真データはシーン単位で提供されているので、志賀全山のデータ（約50シーン）をダウンロードし、レンダリング処理（接合処理）してシームレス画像を試作した。一方、国土地理院からもシームレス航空写真が提供されているが、奥志賀・焼額山・一ノ瀬・高天が原の撮像時期は、丸池・熊の湯・横手山とは全く異なっている。なお、MapBoxが提供しているDEMデータを利用して3Dマップ標示している。<p>
+</div>
+</main>
+
+<aside>
+<div id="menu">
+<div id="left">
+<div class="title">ジョルダン試作</div>
+<div class="side">
+<ul>
+<li><a href="MapLibre_shiga-osm.html"><font color="blue">空中写真レンダリング結果（焼額山、2D）</font></a></li>
+<li><a href="MapLibre_kumanoyu-osm.html"><font color="blue">空中写真レンダリング結果（熊の湯、2D）</font></a></li>
+<p> </p>
+<li><a href="MapBox_Shiga-aerial.html"><font color="blue"><b>試作3Dマップ（焼額山エリア）</b></font></a></li>
+<li><a href="MapBox_Kumanoyu_aerial-local.html"><font color="blue"><b>試作3Dマップ（熊の湯エリア）</b></font></a></li>
+</ul>
+</div>
+</div>
+
+<div id="right">
+<div class="title">国土地理院</div>
+<div class="side">
+<ul>
+<li><a href="MapLibre_shiga-gsi.html"><font color="blue">シームレス航空写真(焼額山、2D)</font></a></li>
+<li><a href="MapLibre_kumanoyu-gsi.html"><font color="blue">シームレス航空写真(熊の湯、2D)</font></a></li>
+<p> </p>
+<li><a href="MapBox_Shiga-gsi-seamless.html"><font color="blue">3Dマップ（焼額山エリア）</font></a></li>
+<li><a href="MapBox_Kumanoyu-gsi-seamless.html"><font color="blue">3Dマップ（熊の湯エリア）</font></a></li>
+</ul>
+</div>
+</div></div>
+</aside>
+
+<p> </p>
+<bside>
+<div id="left">
+<div id="side">
+<div class="title">ジョルダン試作と国土地理院の比較</div>
+<p>国土地理院シームレス航空写真にジョルダン試作レンダリング画像を上書き標示。レンダリング画像の非表示、透過度を変更できる。</p>
+<div class="side">
+<ul>
+<li><a href="Switch_shiga_opacity-gsi.html"><font color="blue">焼額山エリアの画像比較</font></a></li>
+<li><a href="Switch_kumanoyu_opacity-gsi.html"><font color="blue">熊の湯エリアの画像比較</font></a></li>
+</ul>
+</div>
+</div>
+</div>
+</bside>
+
+<footer>c 2023 Jorudan Co.</footer>
+</div>
+</body>
+</html>
