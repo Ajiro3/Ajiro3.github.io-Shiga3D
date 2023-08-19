@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>志賀高原スキーエリア3Dマップ</title>
+<meta name="keywords" content="ページのキーワードA,B,C">
+<meta name="description" content="ページの説明">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="sample_index.css">
+</head>
+<body>
+<div id="outer">
+<header>
+<h1>志賀高原スキーエリア3Dマップ試作</h1>
+</header>
+<CENTER><IMG SRC="Shiga_ski_course_3colors-3Dmapy.jpg" border="2" ALIGN="BOTTOM"> </CENTER>
+<main>
+<div id="text">
+<h2>空中写真データ・レンダリング処理</h2>
+<p>基盤地図情報ダウンロードサービスの「地図・空中写真閲覧サービス」で志賀高原エリアを検索すると、2013年のデータ（整理番号：CCB20137）が公開されている。東西方向の撮影コース番号は、北から奥志賀（C6）、焼額山（C7～C9）、一ノ瀬（C9）、高天ヶ原（C10、C11）、丸池・ジャイアント（C12）、木戸池付近（C13,C14）、熊の湯・横手山・渋峠（C15～C17）である。シーン単位で提供されている空中写真データ84シーンをレンダリング処理（接合処理）し、シームレス画像をOSMラスタータイル形式で制作した。</br>
+
+<h2>スキーコース図の3D表示</h2>
+<p>GeoJSONデータで規定されたスキーコースの位置情報と難易度（初級・中級・上級）を空中写真レンダリング結果画像に上書きし、MapBoxが提供しているDEMデータを利用して3Dマップ表示している。</p>
+</div>
+</main>
+
+<aside>
+<div class="title">ジョルダン試作空中写真レンダリング結果でのコース図表示</div>
+<ul>
+<li><a href="MapLibre_shiga_all-osm.html"><font color="blue">志賀全山 2D</font></a></li>
+<p> </p>
+<li><a href="MapBox_shiga_all-3D3colors.html"><font color="blue"><b>試作3Dコース図（中心：蓮池スキー場付近）</b></font></a></li>
+</ul>
+
+</aside>
+
+<p> </p>
+
+<bside>
+<div class="title">【参考】　国土地理院のシームレス航空写真</div>
+<ul>
+<p>国土地理院からもシームレス航空写真が提供されているが、奥志賀・焼額山・一ノ瀬・高天ヶ原の撮像時期が、丸池・熊の湯・横手山とは全く異なっていることが判る。
+</p>
+<li><a href="MapLibre_shiga_all-gsi.html"><font color="blue">志賀全山 2D</font></a></li>
+<li><a href="MapBox_Shiga_all-gsi-seamless.html"><font color="blue">3Dコース図（中心：蓮池スキー場付近）</font></a></li>
+</ul>
+</bside>
+
+<p> </p>
+
+<cside>
+<div class="title">試作空中写真と国土地理院の比較</div>
+<p>ジョルダン試作レンダリング画像を国土地理院シームレス航空写真に上書き表示している。</br>
+左上のチェックボックスで試作レンダリング画像を非表示としたり、スライドバーで透過度を変更すれば、両者の相違点を目視確認できる。</p>
+<ul>
+<li><a href="Switch_shiga_opacity-gsi.html"><font color="blue">志賀全山の画像比較</font></a></li>
+</ul>
+</cside>
+
+<footer>c 2023 Jorudan Co.</footer>
+</div>
+</body>
+</html>
