@@ -23,15 +23,17 @@
 
         const customSource = {
             type: 'raster',
-            tiles: [`https://ajiro3.github.io/Ajiro3.github.io-Shiga3D/shiga_area/{z}/{x}/{y}.png`],
+            tiles: [`http://localhost/shiga_area/{z}/{x}/{y}.png`],
             tileSize: 256,
         };
 
+        const mbtilesUrl = 'http://localhost/OSM_data/shiga_courses3z.mbtiles'; // Update this with the path to your local MBTiles file
+
         const vectorSource = {
             type: 'vector',
-            tiles: ['https://ajiro3.github.io/Ajiro3.github.io-Shiga3D/shiga_ski_courses/{z}/{x}/{y}.pbf'], 
+            tiles: [mbtilesUrl], // Use the local MBTiles source
             minzoom: 4,
-            maxzoom: 16,
+            maxzoom: 14,
         };
 
         const demSource = {
@@ -50,6 +52,7 @@
                     'ski_courses': vectorSource,
                     'terrain-rgb': demSource,
                 },
+                
                 layers: [
                     {
                         id: 'background',
@@ -72,7 +75,7 @@
                         id: 'courses-easy', // Layer for easy courses
                         type: 'line',
                         source: 'ski_courses',
-                        'source-layer': 'easy', // layer name for easy courses
+                        'source-layer': 'easy', // Change to the correct layer name for easy courses
                         paint: {
                             'line-color': 'lime', // Set the color for easy courses
                             'line-width': 2,
@@ -82,7 +85,7 @@
                         id: 'courses-intermediate', // Layer for intermediate courses
                         type: 'line',
                         source: 'ski_courses',
-                        'source-layer': 'intermediate', // layer name for intermediate courses
+                        'source-layer': 'intermediate', // Change to the correct layer name for intermediate courses
                         paint: {
                             'line-color': 'deeppink', // Set the color for intermediate courses
                             'line-width': 2,
@@ -92,7 +95,7 @@
                         id: 'courses-advanced', // Layer for advanced courses
                         type: 'line',
                         source: 'ski_courses',
-                        'source-layer': 'advanced', // layer name for advanced courses
+                        'source-layer': 'advanced', // Change to the correct layer name for advanced courses
                         paint: {
                             'line-color': 'black', // Set the color for advanced courses
                             'line-width': 2,
@@ -100,10 +103,11 @@
                     },
                 ],
             },
-            center: [138.4991,36.7223], // ** Shiga Giant 
-            zoom: 14,     // Zoom level
-            pitch: 70,    // Adjust pitch to achieve a bird's-eye view
-            bearing: 0,   // Adjust bearing to set the rotation angle
+
+            center: [138.4991,36.7223],
+            zoom: 13,
+            pitch: 60,
+            bearing: 0,
         });
 
         map.addControl(new maplibregl.NavigationControl());
