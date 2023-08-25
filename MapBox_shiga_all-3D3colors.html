@@ -56,6 +56,7 @@
                         type: 'background',
                         paint: {
                             'background-color': '#87CEEB', // Sky blue color
+                            'background-opacity': 0.2,     // Adjust opacity
                         },
                     },
                     {
@@ -104,6 +105,10 @@
             zoom: 14,     // Zoom level
             pitch: 60,    // Adjust pitch to achieve a bird's-eye view
             bearing: 0,   // Adjust bearing to set the rotation angle
+            light: {
+                anchor: 'viewport', color: 'white',
+                intensity: 1.2, // Adjust the light intensity
+            },
         });
 
         map.addControl(new maplibregl.NavigationControl());
